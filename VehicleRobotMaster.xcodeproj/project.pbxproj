@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		443959E32334CF3100181D15 /* NodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443959E12334CF3100181D15 /* NodeViewController.swift */; };
+		4477DEAE2338B29500D8045A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4477DEAD2338B29500D8045A /* Helper.swift */; };
+		4477DEB42338C02500D8045A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4477DEB32338C02500D8045A /* CameraView.swift */; };
+		4477DEB62338C49800D8045A /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4477DEB52338C49800D8045A /* Renderer.swift */; };
+		4477DEB82338C96000D8045A /* Render.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4477DEB72338C96000D8045A /* Render.metal */; };
+		B287A18B61998C727C315D5B /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B287AB45ABA177ECE40C08AD /* RootController.swift */; };
+		B287A2D043B16D9270DBA833 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B287A12A72831760D1A70B2E /* Assets.xcassets */; };
+		B287A2D51D097E38799710B2 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B287A1CDBA59DBD89099E716 /* CameraViewController.swift */; };
+		B287A3BCE748A2D56B2C9C28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B287A66300AB2C1D2761F649 /* Main.storyboard */; };
+		B287A437FAFE2F87ECE5BAAE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B287ADA414A79A6BF98CE9D8 /* Podfile */; };
+		B287A5DB0F7C735FA2212F3E /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B287AA6758D595F3FE13BF48 /* Parameters.swift */; };
+		B287A6598E6F9DCB471AF4FA /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B287AD88D96F1BE4C71381E4 /* Meta.swift */; };
+		B287A73FCBC649C4FBFCFAA7 /* TeleportClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B287A7AA40D1F16A95F27A32 /* TeleportClient.swift */; };
+		B287A781FF286BE1BE327FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B287AA9D49F0CBDFD5F0794E /* LaunchScreen.storyboard */; };
+		B287A8319DFBA2984630F11A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B287AA27DE2F3250BEAB57E4 /* AppDelegate.swift */; };
+		B287A8E958941DD931E8112A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = B287AB52F0ACAAD80715C519 /* Status.swift */; };
+		B287A9DD1166DB007C8061D9 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B287AE246051D8D137EC9B75 /* AnyEncodable.swift */; };
+		B287AC25CD4A79F99E7396CD /* payload.proto in Sources */ = {isa = PBXBuildFile; fileRef = B287A31AF364B367C5CDF989 /* payload.proto */; };
+		B287AD905B6B54AA4FB10DC2 /* Pb.Payload.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B287ACF70694ED898089D317 /* Pb.Payload.proto.swift */; };
+		D9312739C8BD1A788C8DDB74 /* Pods_VehicleRobotMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC216D4CCC254444554FA812 /* Pods_VehicleRobotMaster.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A61F7DFC2F28B7CB610D124 /* Pods-VehicleRobotMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleRobotMaster.release.xcconfig"; path = "Target Support Files/Pods-VehicleRobotMaster/Pods-VehicleRobotMaster.release.xcconfig"; sourceTree = "<group>"; };
+		443959E12334CF3100181D15 /* NodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeViewController.swift; sourceTree = "<group>"; };
+		4477DEAD2338B29500D8045A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		4477DEB32338C02500D8045A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		4477DEB52338C49800D8045A /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		4477DEB72338C96000D8045A /* Render.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Render.metal; sourceTree = "<group>"; };
+		73AEB6F50D3CE04583DD7540 /* Pods-VehicleRobotMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleRobotMaster.debug.xcconfig"; path = "Target Support Files/Pods-VehicleRobotMaster/Pods-VehicleRobotMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		B287A12A72831760D1A70B2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B287A16ACEBACCBF5C9F5DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		B287A1CDBA59DBD89099E716 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B287A31AF364B367C5CDF989 /* payload.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = payload.proto; sourceTree = "<group>"; };
+		B287A697D9AE11044388B42D /* VehicleRobotMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleRobotMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B287A7AA40D1F16A95F27A32 /* TeleportClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleportClient.swift; sourceTree = "<group>"; };
+		B287AA27DE2F3250BEAB57E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B287AA6758D595F3FE13BF48 /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		B287AB45ABA177ECE40C08AD /* RootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
+		B287AB52F0ACAAD80715C519 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		B287ACF70694ED898089D317 /* Pb.Payload.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pb.Payload.proto.swift; sourceTree = "<group>"; };
+		B287AD7BDCE9FFA066AE9B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B287AD88D96F1BE4C71381E4 /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		B287ADA414A79A6BF98CE9D8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B287AE246051D8D137EC9B75 /* AnyEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		B287AF0B28D31F529CAA7845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC216D4CCC254444554FA812 /* Pods_VehicleRobotMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VehicleRobotMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B287AAB1C356C213E9A04DF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9312739C8BD1A788C8DDB74 /* Pods_VehicleRobotMaster.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80767B4A8156A91A9337B6B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73AEB6F50D3CE04583DD7540 /* Pods-VehicleRobotMaster.debug.xcconfig */,
+				0A61F7DFC2F28B7CB610D124 /* Pods-VehicleRobotMaster.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B287A334799EA98D5EF7A08C = {
+			isa = PBXGroup;
+			children = (
+				4477DEB72338C96000D8045A /* Render.metal */,
+				B287AE72CE23747406581A7C /* Products */,
+				B287AB847310CDF6FAD0B702 /* VehicleRobotMaster */,
+				B287ADA414A79A6BF98CE9D8 /* Podfile */,
+				80767B4A8156A91A9337B6B9 /* Pods */,
+				D4E103DA66CDB76CA3AA2757 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B287A63D7EC6B96D9EDFEB2B /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				B287A7AA40D1F16A95F27A32 /* TeleportClient.swift */,
+				B287AB52F0ACAAD80715C519 /* Status.swift */,
+				B287AD88D96F1BE4C71381E4 /* Meta.swift */,
+				B287AA6758D595F3FE13BF48 /* Parameters.swift */,
+				B287AE246051D8D137EC9B75 /* AnyEncodable.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		B287AB847310CDF6FAD0B702 /* VehicleRobotMaster */ = {
+			isa = PBXGroup;
+			children = (
+				B287A16ACEBACCBF5C9F5DFF /* Info.plist */,
+				B287A12A72831760D1A70B2E /* Assets.xcassets */,
+				B287AA9D49F0CBDFD5F0794E /* LaunchScreen.storyboard */,
+				B287AA27DE2F3250BEAB57E4 /* AppDelegate.swift */,
+				B287A66300AB2C1D2761F649 /* Main.storyboard */,
+				B287AB45ABA177ECE40C08AD /* RootController.swift */,
+				B287ADC5248E5790720F5362 /* Protocol */,
+				B287A63D7EC6B96D9EDFEB2B /* Clients */,
+				443959E12334CF3100181D15 /* NodeViewController.swift */,
+				B287A1CDBA59DBD89099E716 /* CameraViewController.swift */,
+				4477DEAD2338B29500D8045A /* Helper.swift */,
+				4477DEB32338C02500D8045A /* CameraView.swift */,
+				4477DEB52338C49800D8045A /* Renderer.swift */,
+			);
+			path = VehicleRobotMaster;
+			sourceTree = "<group>";
+		};
+		B287ADC5248E5790720F5362 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B287A31AF364B367C5CDF989 /* payload.proto */,
+				B287ACF70694ED898089D317 /* Pb.Payload.proto.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B287AE72CE23747406581A7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B287A697D9AE11044388B42D /* VehicleRobotMaster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4E103DA66CDB76CA3AA2757 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC216D4CCC254444554FA812 /* Pods_VehicleRobotMaster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B287A4CA7B444EF63232D056 /* VehicleRobotMaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B287AE1DC10B5FF23BD20F56 /* Build configuration list for PBXNativeTarget "VehicleRobotMaster" */;
+			buildPhases = (
+				D2BFFB07493AE5B3359467F4 /* [CP] Check Pods Manifest.lock */,
+				B287A0EF518D24D09E68B5C4 /* Sources */,
+				B287AAB1C356C213E9A04DF5 /* Frameworks */,
+				B287A0D5D3CCAB1B56BC2EC4 /* Resources */,
+				2E4A89DE4A714ED94535AFC7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VehicleRobotMaster;
+			productName = VehicleRobotMaster;
+			productReference = B287A697D9AE11044388B42D /* VehicleRobotMaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B287AFECDCAC5983A753CC6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Johnnyeven;
+				TargetAttributes = {
+					B287A4CA7B444EF63232D056 = {
+						DevelopmentTeam = B8DUJMT2U8;
+					};
+				};
+			};
+			buildConfigurationList = B287A1D8AD90C6AA347475A6 /* Build configuration list for PBXProject "VehicleRobotMaster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = B287A334799EA98D5EF7A08C;
+			productRefGroup = B287AE72CE23747406581A7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B287A4CA7B444EF63232D056 /* VehicleRobotMaster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B287A0D5D3CCAB1B56BC2EC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B287A2D043B16D9270DBA833 /* Assets.xcassets in Resources */,
+				B287A781FF286BE1BE327FBF /* LaunchScreen.storyboard in Resources */,
+				B287A3BCE748A2D56B2C9C28 /* Main.storyboard in Resources */,
+				B287A437FAFE2F87ECE5BAAE /* Podfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E4A89DE4A714ED94535AFC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VehicleRobotMaster/Pods-VehicleRobotMaster-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BinarySwift/BinarySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/BlueSocket/Socket.framework",
+				"${BUILT_PRODUCTS_DIR}/CDJoystick/CDJoystick.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
+				"${BUILT_PRODUCTS_DIR}/ProtocolBuffers-Swift/ProtocolBuffers.framework",
+				"${BUILT_PRODUCTS_DIR}/QuickTableViewController/QuickTableViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BinarySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDJoystick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtocolBuffers.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickTableViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VehicleRobotMaster/Pods-VehicleRobotMaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2BFFB07493AE5B3359467F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VehicleRobotMaster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B287A0EF518D24D09E68B5C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B287A8319DFBA2984630F11A /* AppDelegate.swift in Sources */,
+				B287A18B61998C727C315D5B /* RootController.swift in Sources */,
+				4477DEB62338C49800D8045A /* Renderer.swift in Sources */,
+				4477DEB42338C02500D8045A /* CameraView.swift in Sources */,
+				B287AC25CD4A79F99E7396CD /* payload.proto in Sources */,
+				B287AD905B6B54AA4FB10DC2 /* Pb.Payload.proto.swift in Sources */,
+				B287A73FCBC649C4FBFCFAA7 /* TeleportClient.swift in Sources */,
+				B287A8E958941DD931E8112A /* Status.swift in Sources */,
+				B287A6598E6F9DCB471AF4FA /* Meta.swift in Sources */,
+				4477DEB82338C96000D8045A /* Render.metal in Sources */,
+				B287A5DB0F7C735FA2212F3E /* Parameters.swift in Sources */,
+				443959E32334CF3100181D15 /* NodeViewController.swift in Sources */,
+				B287A9DD1166DB007C8061D9 /* AnyEncodable.swift in Sources */,
+				B287A2D51D097E38799710B2 /* CameraViewController.swift in Sources */,
+				4477DEAE2338B29500D8045A /* Helper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B287A66300AB2C1D2761F649 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B287AF0B28D31F529CAA7845 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B287AA9D49F0CBDFD5F0794E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B287AD7BDCE9FFA066AE9B44 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B287A7577C2E1BCD280FE3D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73AEB6F50D3CE04583DD7540 /* Pods-VehicleRobotMaster.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = B8DUJMT2U8;
+				INFOPLIST_FILE = VehicleRobotMaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.profzone.vehicle-robot-host";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B287A9C5ED3CA5638668DDCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B287AB4640ED8045C60B0EB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B287ADFF677AF68F3FA0E2F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A61F7DFC2F28B7CB610D124 /* Pods-VehicleRobotMaster.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = B8DUJMT2U8;
+				INFOPLIST_FILE = VehicleRobotMaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.profzone.vehicle-robot-host";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B287A1D8AD90C6AA347475A6 /* Build configuration list for PBXProject "VehicleRobotMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B287AB4640ED8045C60B0EB0 /* Debug */,
+				B287A9C5ED3CA5638668DDCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B287AE1DC10B5FF23BD20F56 /* Build configuration list for PBXNativeTarget "VehicleRobotMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B287A7577C2E1BCD280FE3D5 /* Debug */,
+				B287ADFF677AF68F3FA0E2F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B287AFECDCAC5983A753CC6D /* Project object */;
+}

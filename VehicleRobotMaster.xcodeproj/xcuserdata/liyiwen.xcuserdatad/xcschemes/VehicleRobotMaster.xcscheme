@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B287A4CA7B444EF63232D056"
+               BuildableName = "VehicleRobotMaster.app"
+               BlueprintName = "VehicleRobotMaster"
+               ReferencedContainer = "container:VehicleRobotMaster.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B287A4CA7B444EF63232D056"
+            BuildableName = "VehicleRobotMaster.app"
+            BlueprintName = "VehicleRobotMaster"
+            ReferencedContainer = "container:VehicleRobotMaster.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>

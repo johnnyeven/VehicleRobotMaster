@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RootController" customModule="VehicleRobotMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4jo-lC-bzZ">
+                                <rect key="frame" x="132" y="452" width="150" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Eew-Ft-L68"/>
+                                    <constraint firstAttribute="height" constant="2" id="wre-Cx-5XY"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inh-kY-Eup">
+                                <rect key="frame" x="132" y="475" width="150" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="1DT-5r-vmM"/>
+                                    <constraint firstAttribute="width" constant="150" id="kcc-lB-3qs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4jo-lC-bzZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0NA-gg-p3B"/>
+                            <constraint firstItem="inh-kY-Eup" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="40" id="Umb-9Q-OdI"/>
+                            <constraint firstItem="inh-kY-Eup" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dgn-i7-OIE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerY" secondItem="4jo-lC-bzZ" secondAttribute="centerY" id="z0U-wG-qB9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelConnection" destination="inh-kY-Eup" id="lNh-F9-pT3"/>
+                        <outlet property="progressConnection" destination="4jo-lC-bzZ" id="EaZ-F5-SfC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="20.758928571428569"/>
+        </scene>
+        <!--Node View Controller-->
+        <scene sceneID="jui-fe-4eh">
+            <objects>
+                <viewController storyboardIdentifier="nodeViewController" id="2Nv-97-BfI" customClass="NodeViewController" customModule="VehicleRobotMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4zv-AZ-Cti">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tbq-8E-aP5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tbq-8E-aP5" firstAttribute="top" secondItem="qNU-Ba-5D6" secondAttribute="top" id="9Hr-u9-29e"/>
+                            <constraint firstItem="qNU-Ba-5D6" firstAttribute="trailing" secondItem="Tbq-8E-aP5" secondAttribute="trailing" id="gtD-iS-Yo1"/>
+                            <constraint firstItem="qNU-Ba-5D6" firstAttribute="bottom" secondItem="Tbq-8E-aP5" secondAttribute="bottom" id="hfv-Ia-9Bt"/>
+                            <constraint firstItem="Tbq-8E-aP5" firstAttribute="leading" secondItem="qNU-Ba-5D6" secondAttribute="leading" id="kOJ-jf-gOc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qNU-Ba-5D6"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableNodes" destination="Tbq-8E-aP5" id="YLv-Vm-QjK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iG0-k8-JdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="20.758928571428569"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="lER-8v-cwt">
+            <objects>
+                <viewController storyboardIdentifier="cameraViewController" id="kI0-UX-qKn" customClass="CameraViewController" customModule="VehicleRobotMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yaa-3T-oUL" customClass="CameraView" customModule="VehicleRobotMaster" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAG-TY-87B" customClass="CDJoystick" customModule="CDJoystick">
+                                <rect key="frame" x="40" y="714" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Gbo-fX-a5k"/>
+                                    <constraint firstAttribute="width" constant="128" id="vgM-pC-LSC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Yu6-wK-Mdx" firstAttribute="bottom" secondItem="iAG-TY-87B" secondAttribute="bottom" constant="20" id="Oaw-Zi-lDt"/>
+                            <constraint firstItem="iAG-TY-87B" firstAttribute="leading" secondItem="Yu6-wK-Mdx" secondAttribute="leading" constant="40" id="gCb-IY-cuw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yu6-wK-Mdx"/>
+                    </view>
+                    <connections>
+                        <outlet property="joystick" destination="iAG-TY-87B" id="cqW-Ce-Ujr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cfe-dX-1ln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.7391304347827" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
