@@ -80,7 +80,6 @@
 		B287A334799EA98D5EF7A08C = {
 			isa = PBXGroup;
 			children = (
-				4477DEB72338C96000D8045A /* Render.metal */,
 				B287AE72CE23747406581A7C /* Products */,
 				B287AB847310CDF6FAD0B702 /* VehicleRobotMaster */,
 				B287ADA414A79A6BF98CE9D8 /* Podfile */,
@@ -104,6 +103,7 @@
 		B287AB847310CDF6FAD0B702 /* VehicleRobotMaster */ = {
 			isa = PBXGroup;
 			children = (
+				4477DEB72338C96000D8045A /* Render.metal */,
 				B287A16ACEBACCBF5C9F5DFF /* Info.plist */,
 				B287A12A72831760D1A70B2E /* Assets.xcassets */,
 				B287AA9D49F0CBDFD5F0794E /* LaunchScreen.storyboard */,
