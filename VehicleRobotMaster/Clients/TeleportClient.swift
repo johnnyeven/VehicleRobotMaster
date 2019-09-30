@@ -188,6 +188,16 @@ class TeleportClient {
         return nil
     }
     
+    func cameraHolder(req: CameraHolderRequest) -> Status? {
+        do {
+            try push(method: "/camera/holder", body: req, bodyCodec: "j")
+        } catch {
+            return Status(code: 10, message: "", cause: error.localizedDescription)
+        }
+        
+        return nil
+    }
+    
     func pushRouter(method: String, handler: @escaping (Data) -> Void) {
         requestHandlerMap.updateValue(handler, forKey: method)
     }

@@ -13,6 +13,11 @@ enum MovingDirection: String, Encodable {
     case Stop = "STOP"
 }
 
+enum HolderDerection: String, Encodable {
+    case Horizen = "HORIZEN"
+    case Vertical = "VERTICAL"
+}
+
 struct AuthorizationRequest: Encodable {
     var key: String
 }
@@ -47,4 +52,11 @@ struct PowerMovingRequest: Encodable {
     var target: String
     var direction: MovingDirection
     var speed: Float64
+}
+
+struct CameraHolderRequest: Encodable {
+    var token: String
+    var target: String
+    var direction: HolderDerection
+    var angle: UInt8
 }
