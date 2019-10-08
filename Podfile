@@ -6,4 +6,5 @@ target 'VehicleRobotMaster' do
   pod 'XCGLogger'
   pod 'QuickTableViewController'
   pod 'CDJoystick'
+  pod 'CocoaAsyncSocket'
 end

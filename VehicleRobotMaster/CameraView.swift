@@ -31,4 +31,16 @@ class CameraView: MTKView {
         renderer = Renderer(device: device)
         delegate = renderer
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touch began")
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touch move")
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touch end")
+    }
 }

@@ -19,6 +19,7 @@ enum MessageType: Int32 {
 class TeleportClient {
 
     private var remainData: Data?
+    public static var ip: String = ""
     private static var instance: TeleportClient?
     private var sequence: Int32 = 0
     private var client: Socket?
@@ -35,7 +36,7 @@ class TeleportClient {
     init() {
         do {
             client = try Socket.create()
-            try client?.connect(to: "robot.profzone.net", port: 9090)
+            try client?.connect(to: TeleportClient.ip, port: 9090)
         } catch let error {
             return
         }

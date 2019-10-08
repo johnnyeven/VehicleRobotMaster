@@ -58,5 +58,5 @@ struct CameraHolderRequest: Encodable {
     var token: String
     var target: String
     var direction: HolderDerection
-    var angle: UInt8
+    var offset: Float64
 }

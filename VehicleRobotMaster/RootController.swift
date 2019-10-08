@@ -7,19 +7,55 @@
 //
 
 import UIKit
+import Socket
+import CocoaAsyncSocket
 
 @available(iOS 13.0, *)
-class RootController: UIViewController {
+class RootController: UIViewController, GCDAsyncUdpSocketDelegate {
     
     @IBOutlet weak var progressConnection: UIProgressView!
     @IBOutlet weak var labelConnection: UILabel!
     
+    var udpSocket: GCDAsyncUdpSocket!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelConnection.text = "获取授权信息..."
+        labelConnection.text = "查找局域网内的终端..."
         progressConnection.setProgress(0, animated: true)
+        udpSocket = GCDAsyncUdpSocket(delegate: self, delegateQueue: DispatchQueue.main)
+        do {
+            try udpSocket.bind(toPort: 9091)
+            try udpSocket.beginReceiving()
+        } catch {
+            print("bind error")
+        }
+    }
+    
+    func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext fileterContext: Any?) {
+        var hostname = [CChar].init(repeating: 0, count: Int(NI_MAXHOST))
+        do{
+            try address.withUnsafeBytes({ (pointer:UnsafePointer<sockaddr>) -> Void in
+                guard getnameinfo(pointer, socklen_t(data.count), &hostname, socklen_t(hostname.count), nil, 0, NI_NUMERICHOST) == 0 else{
+                    throw NSError(domain: "domain", code: 0, userInfo: ["error":"unable to get ip address"])
+                }
+            })
+        }catch(let error){
+            print(error.localizedDescription)
+        }
         
+        var newAddress = String.init(cString: hostname)
+        let addArry = newAddress.components(separatedBy: ":")
+        if addArry.count > 1 {
+            newAddress = addArry[addArry.count-1]
+        }
+        print("IP:\(newAddress):9091")
+        
+        TeleportClient.ip = newAddress
+        udpSocket.close()
+        
+        labelConnection.text = "等待授权..."
+        progressConnection.setProgress(0.5, animated: true)
         let authRequest = AuthorizationRequest(key: "456")
         let stat = TeleportClient.getInstance()?.authorization(req: authRequest, closure: { data -> Void in
             do {
@@ -39,7 +75,7 @@ class RootController: UIViewController {
         if stat != nil {
             log.error(stat!.cause)
         } else {
-            progressConnection.setProgress(0.5, animated: true)
+            progressConnection.setProgress(0.7, animated: true)
         }
     }
 
