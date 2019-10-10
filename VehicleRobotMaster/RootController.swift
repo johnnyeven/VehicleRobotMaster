@@ -42,6 +42,7 @@ class RootController: UIViewController, GCDAsyncUdpSocketDelegate {
             })
         }catch(let error){
             print(error.localizedDescription)
+            return
         }
         
         var newAddress = String.init(cString: hostname)
@@ -49,10 +50,18 @@ class RootController: UIViewController, GCDAsyncUdpSocketDelegate {
         if addArry.count > 1 {
             newAddress = addArry[addArry.count-1]
         }
-        print("IP:\(newAddress):9091")
         
-        TeleportClient.ip = newAddress
-        udpSocket.close()
+        do {
+            let broadcast = try JSONDecoder().decode(BroadcastRequest.self, from: data)
+            TeleportClient.ip = newAddress
+            TeleportClient.port = Int32(broadcast.port)
+            
+            print("IP:\(newAddress):\(broadcast.port)")
+            udpSocket.close()
+        } catch {
+            print(error)
+            return
+        }
         
         labelConnection.text = "等待授权..."
         progressConnection.setProgress(0.5, animated: true)

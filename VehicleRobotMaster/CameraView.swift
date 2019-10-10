@@ -11,6 +11,9 @@ import MetalKit
 
 class CameraView: MTKView {
     var renderer: Renderer!
+    var startX: CGFloat = 0
+    var startY: CGFloat = 0
+    
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
@@ -33,14 +36,29 @@ class CameraView: MTKView {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touch began")
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: self)
+        
+        startX = location.x
+        startY = location.y
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touch move")
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: self)
+        
+        let offsetX = location.x - startX
+        let offsetY = location.y - startY
+        
+        startX = location.x
+        startY = location.y
+        
+        let request = CameraHolderRequest(token: token, target: controlTarget, horizonOffset: Float64(offsetX), verticalOffset: Float64(offsetY))
+        _ = TeleportClient.getInstance()?.cameraHolder(req: request) {data in}
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touch end")
+        startX = 0
+        startY = 0
     }
 }

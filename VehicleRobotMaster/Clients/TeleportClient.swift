@@ -20,6 +20,7 @@ class TeleportClient {
 
     private var remainData: Data?
     public static var ip: String = ""
+    public static var port: Int32 = 0
     private static var instance: TeleportClient?
     private var sequence: Int32 = 0
     private var client: Socket?
@@ -36,7 +37,7 @@ class TeleportClient {
     init() {
         do {
             client = try Socket.create()
-            try client?.connect(to: TeleportClient.ip, port: 9090)
+            try client?.connect(to: TeleportClient.ip, port: TeleportClient.port)
         } catch let error {
             return
         }
@@ -149,7 +150,11 @@ class TeleportClient {
             let sequence = message.seq
             let closure = replyHandlerMap[sequence!]
             if closure != nil {
-                (closure!)(message.body!)
+                if message.body != nil {
+                    (closure!)(message.body!)
+                } else {
+                    (closure!)(Data())
+                }
             }
         } else {
             let handler = requestHandlerMap[message.serviceMethod]
@@ -189,9 +194,9 @@ class TeleportClient {
         return nil
     }
     
-    func cameraHolder(req: CameraHolderRequest) -> Status? {
+    func cameraHolder(req: CameraHolderRequest, closure: @escaping (Data) -> Void) -> Status? {
         do {
-            try push(method: "/camera/holder", body: req, bodyCodec: "j")
+            try call(method: "/camera/holder", body: req, bodyCodec: "j", closure: closure)
         } catch {
             return Status(code: 10, message: "", cause: error.localizedDescription)
         }

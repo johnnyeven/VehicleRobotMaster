@@ -18,6 +18,10 @@ enum HolderDerection: String, Encodable {
     case Vertical = "VERTICAL"
 }
 
+struct BroadcastRequest: Decodable {
+    var port: UInt16
+}
+
 struct AuthorizationRequest: Encodable {
     var key: String
 }
@@ -57,6 +61,6 @@ struct PowerMovingRequest: Encodable {
 struct CameraHolderRequest: Encodable {
     var token: String
     var target: String
-    var direction: HolderDerection
-    var offset: Float64
+    var horizonOffset: Float64
+    var verticalOffset: Float64
 }
