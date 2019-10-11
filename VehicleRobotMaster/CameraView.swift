@@ -53,7 +53,7 @@ class CameraView: MTKView {
         startX = location.x
         startY = location.y
         
-        let request = CameraHolderRequest(token: token, target: controlTarget, horizonOffset: Float64(offsetX), verticalOffset: Float64(offsetY))
+        let request = CameraHolderRequest(token: token, target: controlTarget, horizonOffset: Float64(offsetX) * 0.2, verticalOffset: Float64(offsetY) * 0.2)
         _ = TeleportClient.getInstance()?.cameraHolder(req: request) {data in}
     }
     
